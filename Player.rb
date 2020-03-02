@@ -7,11 +7,10 @@ class Player
   attr_accessor :name, :lives;
 
   def ask_question(question)
-    puts "#{name}: What is #{question[0]} + #{question[1]}"
+    puts "#{name}: What is #{question[1]} #{question[0]} #{question[2]}"
     player_answer = gets.chomp.to_i
-    answer = question[0] + question[1]
-    if player_answer != answer
-      puts "#{name}: False"
+    if player_answer != question[3]
+      puts "#{name}: False, correct answer was #{question[3]}"
       self.lives -= 1
     else
       puts "#{name}: Correct"
