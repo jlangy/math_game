@@ -26,8 +26,7 @@ class Game
 
   def start
     while @p1.lives > 0 && @p2.lives > 0 do     
-      puts "----- NEW TURN -----"
-      
+      puts "----- NEW TURN -----"  
       if @p1Turn  
         @p1.ask_question(self.make_question)
       else 
